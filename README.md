@@ -1,5 +1,6 @@
 ## AstroCuriosity - Imersão Dev com Google Gemini
 
+![astrocuriosity_logo](https://github.com/user-attachments/assets/00a7a966-560f-4b85-b689-262e00b84731)
 
 É um site simples e divertido para você explorar o universo! Quer saber mais sobre um planeta, uma estrela ou uma nebulosa? Basta digitar o nome e pronto! A AstroCuriosity te mostra tudo o que precisa saber sobre o objeto celestial que você está procurando.
 
