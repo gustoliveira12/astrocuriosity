@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <!-- Cabeçalho da página -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <title>AstroCuriosity</title>
+  </head>
+  <!-- Corpo da página -->
+  <body>
+    <header>
+      <img src="/images/astrocuriosity_logo.png" class="logo">
+    </header>
+    <main>
+      <!-- Campo de busca -->
+      <section>
+        <input type="text" placeholder="Pesquisar" id="campo-pesquisa"/>
+        <button onclick="pesquisar()">Pesquisar</button>
+      </section>
+      <!-- Resultados da busca -->
+      <section class="resultados-pesquisa" id="resultados-pesquisa">
+      </section>
+    </main>
+    <!-- Rodapé da página -->
+    <footer>
+      <p>© 2024 AstroCuriosity. Todos os direitos reservados.</p>
+      <p>
+        Entre em contato conosco:
+        <a href="mailto:gustavo.hmoliveira12@gmail.com">gustavo.hmoliveria12@gmail.com</a>
+      </p>
+    </footer>
+    <!-- Scripts da página -->
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
