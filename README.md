@@ -30,3 +30,5 @@ Quer ajudar a melhorar a AstroCuriosity? Você pode:
 * **Melhorar o design:** Se tiver ideias para deixar o site ainda mais bonito, compartilhe!
 
 **Vamos juntos explorar o universo!**
+
+Projeto idealizado e realizado durante a Imersão Dev com Google Gemini da Alura em Setembro de 2024 - Atualizações futuras virão!
