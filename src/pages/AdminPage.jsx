@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { supabase } from '../lib/supabase'
+import { supabase, isConfigured } from '../lib/supabase'
 
 const TIPOS = [
   'Buraco Negro', 'Galáxia Espiral', 'Galáxias satélites anãs irregulares',
@@ -50,6 +50,12 @@ export default function AdminPage() {
     setLoading(true)
     setFeedback(null)
 
+    if (!isConfigured || !supabase) {
+      setFeedback({ type: 'error', message: 'Supabase não configurado. Preencha o arquivo .env.' })
+      setLoading(false)
+      return
+    }
+
     const { error } = await supabase.from('celestial_objects').insert([form])
 
     if (error) {
@@ -63,7 +69,9 @@ export default function AdminPage() {
   }
 
   async function handleLogout() {
-    await supabase.auth.signOut()
+    if (supabase) {
+      await supabase.auth.signOut()
+    }
     navigate('/')
   }
 

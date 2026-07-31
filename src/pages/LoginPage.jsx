@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import { supabase } from '../lib/supabase'
+import { supabase, isConfigured } from '../lib/supabase'
 
 export default function LoginPage() {
   const [email, setEmail]       = useState('')
@@ -14,9 +14,15 @@ export default function LoginPage() {
     setLoading(true)
     setError(null)
 
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    if (!isConfigured || !supabase) {
+      setError('Supabase não configurado. Preencha o arquivo .env para continuar.')
+      setLoading(false)
+      return
+    }
 
-    if (error) {
+    const { error: signInError } = await supabase.auth.signInWithPassword({ email, password })
+
+    if (signInError) {
       setError('Email ou senha inválidos.')
     } else {
       navigate('/admin')

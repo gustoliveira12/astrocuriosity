@@ -29,7 +29,14 @@ public/
   favicon/
 supabase/
   migration.sql         # schema + dados iniciais
+  add_admin_policy.sql  # policy de escrita para admin
 ```
+
+## Setup do Supabase
+
+1. Execute [supabase/migration.sql](supabase/migration.sql) no SQL Editor.
+2. Execute [supabase/add_admin_policy.sql](supabase/add_admin_policy.sql) para habilitar escrita administrativa.
+3. No Supabase Auth, marque o usuário admin com app_metadata.is_admin = true.
 
 ---
 

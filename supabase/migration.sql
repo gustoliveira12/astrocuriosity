@@ -23,6 +23,10 @@ ALTER TABLE celestial_objects ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "public_read" ON celestial_objects
   FOR SELECT TO anon USING (true);
 
+-- 3.1 Permitir leitura também para usuários autenticados
+CREATE POLICY "authenticated_read" ON celestial_objects
+  FOR SELECT TO authenticated USING (true);
+
 -- 4. Inserir dados
 INSERT INTO celestial_objects (titulo, descricao, tipo, caracteristicas, link, imagem, tags) VALUES
 

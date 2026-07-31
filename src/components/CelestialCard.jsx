@@ -1,8 +1,10 @@
 export default function CelestialCard({ object, onSelect }) {
   return (
-    <div
+    <button
+      type="button"
       onClick={() => onSelect(object)}
-      className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden cursor-pointer hover:border-sky-500 hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-200 hover:-translate-y-1"
+      aria-label={`Ver detalhes de ${object.titulo}`}
+      className="group w-full text-left bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden cursor-pointer hover:border-sky-500 hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-200 hover:-translate-y-1"
     >
       {/* Image */}
       <div className="relative h-44 overflow-hidden">
@@ -27,6 +29,6 @@ export default function CelestialCard({ object, onSelect }) {
           {object.descricao}
         </p>
       </div>
-    </div>
+    </button>
   )
 }

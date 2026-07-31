@@ -31,7 +31,8 @@ export default function CelestialGrid({ results, loading, error, onSelect }) {
           <p>1. Copie <code className="text-sky-400">.env.example</code> para <code className="text-sky-400">.env</code></p>
           <p>2. Preencha <code className="text-sky-400">VITE_SUPABASE_URL</code> e <code className="text-sky-400">VITE_SUPABASE_ANON_KEY</code></p>
           <p>3. Execute <code className="text-sky-400">supabase/migration.sql</code> no SQL Editor do Supabase</p>
-          <p>4. Reinicie o servidor de desenvolvimento</p>
+          <p>4. Execute <code className="text-sky-400">supabase/add_admin_policy.sql</code> para habilitar escrita no admin</p>
+          <p>5. Reinicie o servidor de desenvolvimento</p>
         </div>
       </div>
     )
